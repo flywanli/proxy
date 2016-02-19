@@ -1,1 +1,35 @@
+ECEN-602 Programming Assignment 3
+----------------------------------
+
+Team Number: 10
+Member 1 # Sama, Avani 
+Member 2 # Li, Wan  
+---------------------------------------
+
+Design:
+--------------------
+For the http_client.c
+●	Command line is in the following format: /client.o  <proxy address> <proxy port> <URL to retrieve>
+●	Connect() used to connect to server
+●	Domain name and page name are separated from URL
+●	GET function sent to proxy server 
+●	Date recieved from server is stored in a recvfile.txt
+
+
+For the http_server.c
+●	Command line is in the following format: /server.o <proxy address> <proxy port> 
+●	Bind() used to connect to client while connect used for connecting to web server
+●	Select() used to multiplex between different client request
+●	QueryCache () Handles functions within a cache-  insertion,deletion,getting data from cache
+●	Depending upon the output of QueryCache()-
+○	 Webpage is sent from cache
+○	 Webpage requested from web server
+○	 Webpage modified using conditional GET
+
+---------------------------------------
+
+Implementation:
+-----------------------------------------
+Command line for client-  /client.o  <proxy address> <proxy port> <URL to retrieve>
+Command line for proxy_server: /server.o <proxy address> <proxy port> 
 
